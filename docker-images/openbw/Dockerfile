@@ -7,6 +7,8 @@
 #  - SDL2 dev
 #  - bwapi: latest from OpenBW repository master
 #  - openbw: latest from OpenBW repository master
+#  - BW 1.16.1
+#  - SSCAIT map pool
 #
 
 FROM gcc:6
