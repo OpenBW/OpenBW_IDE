@@ -6,14 +6,9 @@ Dockerized Integrated Development Environment for OpenBW
 
 The following setup is assumed:
 
- - docker installed
+ - docker installed on a 64bit (Linux) host
  
- Optionally:
- 
- - linux host OS
- 
- 
- Note: the linux host OS is not required, since docker also runs on other operating systems. However, the IDE has been tested on Ubuntu only.
+Note: The host operating system is not required to be Linux, since docker also runs on other operating systems. However, the IDE has been tested on Ubuntu only.
  
  
 ## Installation
@@ -68,11 +63,15 @@ Docker is able to route graphical output to the host via X11. In order to do so 
 `docker run -ti -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY openbw:0.9 /bin/bash`
 
 Troubleshooting:
+
 For the above command to work docker must be able to access the X-Server.
 This can be achieved by executing the following command in the console:
+
 `xhost +local:docker`
 
 Check if X11 Forwarding is enabled in /etc/ssh/ssh_config:
+
 `grep X /etc/ssh/sshd_config`
+
 should return `ForwardX11 yes`
 
